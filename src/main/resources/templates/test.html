@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mon App</title>
+    <link rel="stylesheet" href="/css/app.css" />
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline">Test Page</h1>
+    <p>Ceci est une page de test.</p>
+    <h1 th:text="'Le paramètre est : ' + ${tessString}"></h1>
+  </body>
+</html>
