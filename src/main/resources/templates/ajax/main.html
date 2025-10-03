@@ -1,0 +1,31 @@
+<div class="p-4 border rounded shadow">
+  <form
+    hx-post="/ajax/upload"
+    hx-target="#toast"
+    hx-swap="innerHTML"
+    enctype="multipart/form-data"
+    method="post"
+  >
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="media"
+        >New Media</label
+      >
+      <input
+        class="mt-1 block w-full"
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Media Title"
+        required
+      />
+    </div>
+    <button
+      class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+      type="submit"
+    >
+      Create Media
+    </button>
+  </form>
+  <h1 class="text-2xl font-bold mt-6 mb-4">Media List</h1>
+  <div hx-get="/ajax/medias" hx-trigger="load" hx-swap="innerHTML"></div>
+</div>

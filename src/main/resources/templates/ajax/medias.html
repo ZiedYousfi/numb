@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+  <div th:fragment="mediasFragment">
+    <div class="p-4 border rounded shadow">
+      <h2 th:for="*{medias}" th:text="${media.name}" class="text-xl font-semibold mb-2"></h2>
+      <p th:for="*{medias}" th:text="${media.description}" class="text-gray-600"></p>
+    </div>
+  </div>
+</html>
