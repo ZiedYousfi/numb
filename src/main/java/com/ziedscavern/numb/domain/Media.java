@@ -10,7 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Media {
-  private String userId;
   private String id;
   private String title;
   private String description;
