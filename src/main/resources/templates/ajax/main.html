@@ -1,9 +1,8 @@
 <div class="p-4 border rounded shadow">
   <form
-    hx-post="/ajax/upload"
+    hx-post="/ajax/new-media"
     hx-target="#toast"
     hx-swap="innerHTML"
-    enctype="multipart/form-data"
     method="post"
   >
     <div class="mb-4">
@@ -16,6 +15,22 @@
         id="title"
         name="title"
         placeholder="Media Title"
+        required
+      />
+      <input
+        class="mt-1 block w-full"
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Media Description"
+        required
+      />
+      <input
+        class="mt-1 block w-full"
+        type="text"
+        id="type"
+        name="type"
+        placeholder="Media Type"
         required
       />
     </div>

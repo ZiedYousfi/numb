@@ -1,6 +1,7 @@
 package com.ziedscavern.numb.application.services;
 
 import java.util.UUID;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import com.ziedscavern.numb.domain.Media;
@@ -22,6 +23,10 @@ public class MediaService {
   public Media createMedia(Media media) {
     media.setId(UUID.randomUUID().toString());
     return mediaRepository.save(media);
+  }
+
+  public List<Media> getAllMedias() {
+    return mediaRepository.findAll();
   }
 
   public void deleteMedia(String id) {
